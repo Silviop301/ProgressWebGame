@@ -14,7 +14,7 @@ function updateUpgradesVisibility() {
     let upgrade1 = document.getElementById('upgrade1');
     if (score >= 15 && !hasShowed1) {
         upgrade1.removeAttribute('disabled');
-        upgrade1.textContent = 'MamaHuevo digo glugluglgu';
+        upgrade1.textContent = 'Upgrade 1';
         hasShowed1 = true;
     } else if (score >= 100 && !hasShowed2) {
         let upgrade2 = document.getElementById('upgrade2');
