@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jogo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" style="margin: 1%;">
+        Upgrades
+      </button>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Upgrades</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <button id="upgrade1" class="btn btn-secondary mb-2" disabled>15</button>
+          <button id="upgrade2" class="btn btn-secondary mb-2" disabled>100</button>
+          <button id="upgrade3" class="btn btn-secondary mb-2" disabled>300</button>
+          <button id="upgrade4" class="btn btn-secondary mb-2" disabled>500</button>
+          <button id="upgrade5" class="btn btn-secondary mb-2" disabled>1000</button>
+          <button id="upgrade6" class="btn btn-secondary mb-2" disabled>1500</button>
+          <button id="upgrade7" class="btn btn-secondary mb-2" disabled>3000</button>
+        </div>
+      </div>
+    <div class="divisao"></div>
+    <div class="container-lg text-center" id="boxPontuacao">
+        <div class="row">
+        <div class="col">Titulo </div>
+        <div class="col"><p>Dinheiros: $<span id="scoreDisplay">1110</span></p>
+        </div>
+        </div>
+    </div>
+    <div class="divisao"></div>
+    <div class="container-lg" id="boxJogo">
+        <div class="row">
+            <div class="col"><button type="button" class="btn btn-info" id="startProgress">Ação 1</button></div>
+            <div class="col">
+                <div class="progress mt-3">
+                    <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="105"></div>
+                </div> 
+            </div>
+            <div class="col"><span id="timerDisplay">0</span></div>
+        </div>
+        <div class="divisao2"></div>
+        <div class="row" id="habilidade2" hidden>
+            <div class="col"><button type="button" class="btn btn-info" id="startProgress2">MamaHuevo KKKKK</button></div>
+            <div class="col">
+                <div class="progress mt-3">
+                    <div id="progressBar2" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="105"></div>
+                </div>
+            </div>
+            <div class="col"><span id="timerDisplay2">0</span></div>
+        </div>
+        <div class="divisao2"></div>
+        <div class="row" id="habilidade3" hidden>
+            <div class="col"><button type="button" class="btn btn-info" id="startProgress3">Ação 3</button></div>
+            <div class="col">
+                <div class="progress mt-3">
+                <div id="progressBar3" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="105"></div>
+            </div>
+        </div>
+            <div class="col"><span id="timerDisplay3">0</span></div>
+        </div>
+        <div class="divisao2"></div>
+        <div class="row" id="habilidade4" hidden>
+            <div class="col"><button type="button" class="btn btn-info" id="startProgress4">Ação 4</button></div>
+            <div class="col">
+                <div class="progress mt-3">
+                    <div id="progressBar4" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="105"></div>
+                </div>
+            </div>
+            <div class="col"><span id="timerDisplay4">0</span></div>
+        </div>
+        <div class="divisao2"></div>
+        <div class="row" id="habilidade5" hidden>
+            <div class="col"><button type="button" class="btn btn-info" id="startProgress5">Ação 5</button></div>
+            <div class="col">
+                <div class="progress mt-3">
+                    <div id="progressBar5" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="105"></div>
+                </div>
+            </div>
+            <div class="col"><span id="timerDisplay5">0</span></div>
+        </div>
+        <div class="divisao2"></div>
+        <div class="row" id="habilidade6" hidden>
+            <div class="col"><button type="button" class="btn btn-info" id="startProgress6">Ação 6</button></div>
+            <div class="col">
+                <div class="progress mt-3">
+                    <div id="progressBar6" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="105"></div>
+                </div>
+            </div>
+            <div class="col"><span id="timerDisplay6">0</span></div>
+        </div>
+        <div class="divisao2"></div>
+        <div class="row" id="habilidade7" hidden>
+            <div class="col"><button type="button" class="btn btn-info" id="startProgress7">Ação 7</button></div>
+            <div class="col">
+                <div class="progress mt-3">
+                    <div id="progressBar7" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="105"></div>
+                </div>
+            </div>
+            <div class="col"><span id="timerDisplay7">0</span></div>
+        </div>
+        <div class="divisao2"></div>
+        <div class="row" id="habilidade8" hidden>
+            <div class="col"><button type="button" class="btn btn-info" id="startProgress8">Ação 8</button></div>
+            <div class="col">
+                <div class="progress mt-3">
+                    <div id="progressBar8" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="105"></div>
+                </div>
+            </div>
+            <div class="col"><span id="timerDisplay8">0</span></div>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="js/offcanvas.js"></script>
+    <script src="js/upgrades.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+</body>
+</html>
